@@ -52,6 +52,7 @@ URL for access
       1. http://127.0.0.1:8000/accounts/register/
       2. http://127.0.0.1:8000/accounts/login/
       3.  http://127.0.0.1:8000/accounts/dashboard/
+      4. http://127.0.0.1:8000/accounts/
 
       
       
