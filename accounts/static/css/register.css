@@ -1,0 +1,75 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the form */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+}
+
+/* Messages */
+p {
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Form container */
+form {
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input and file fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Submit button */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    form {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+}

@@ -1,0 +1,27 @@
+{% extends "accounts/base.html" %}
+
+{% load static %}
+ {% block head %}
+ 
+ <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+ 
+ {% endblock  %}
+
+
+{% block content %}
+
+<h2>Welcome, {{ request.user.username }}</h2>
+    <p>Email: {{ request.user.email }}</p>
+    <p>Phone: {{ user_profile.phone_number }}</p>
+
+    {% if user_profile.kyc_verified %}
+        <p>KYC Status: Verified ✅</p>
+    {% else %}
+        <p>KYC Status: Pending ⏳</p>
+    {% endif %}
+    <center>
+    <a href="{% url 'logout' %}">Logout</a>
+    <center>
+
+
+{% endblock content %}
