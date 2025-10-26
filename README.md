@@ -28,77 +28,38 @@ Frontend	: HTML, CSS (basic forms for interaction)
 ORM	: Django ORM
 Security :Password hashing, input validation
 
+Features
 
-## Project Plan — Sprint Breakdown  ## 
+1. User Registration
+      Users provide a username, email, and password.
+      Users can upload a KYC document (PDF, image, etc.).
+      User data and profile are stored securely in the database.
 
+2. KYC Trigger
 
-Sprint 1: Project Setup & Environment
+      Uploaded KYC document is saved in the system.
+      Users can view KYC verification status on their dashboard (Pending/Verified).
+3. User Authentication
+         Secure login and logout functionality.
+         Dashboard access is restricted to logged-in users.
 
-  Goal: Create and configure a Django + DRF project environment
-    Deliverables:
-      Django project structure
-      Virtual environment setup
-      Installed dependencies
-      Database setup (SQLite initially)
-      Git repo initialized
-
-Sprint 2: User & Profile Models
-  Goal: Create the User and Profile models with a one-to-one relationship
-  Deliverables:
-    accounts app
-    Profile model linked to Django User
-    Admin registration
-    Database migrations
-
-Sprint 3: Secure User Registration
-
-Goal: Implement user registration with validation and password hashing
-  Deliverables:
-    RegisterView API
-    Strong password validation
-    Unique username/email enforcement
-    On registration → create empty Profile
-
-Sprint 4: KYC Upload System
-  
-  Goal: Enable users to upload simulated KYC documents
-    Deliverables:
-      KYC model + upload path (media/kyc_docs/)
-      File upload endpoint/form
-      KYC status field: Pending / Approved / Rejected
-      Admin panel to view and update status
-
-Sprint 5: JWT Authentication
-
-  Goal: Secure the system using JWT (via SimpleJWT)
-    Deliverables:
-      /api/token/ and /api/token/refresh/ endpoints
-      Login using username/email + password
-      Auth-protected routes
-
-Sprint 6: Security & Validation
-
-  Goal: Apply final security hardening
-    Deliverables:
-      Password hashing (built-in Django)
-      Input sanitization & validation
-      Permissions (e.g., only admin can approve KYC)
-      CSRF & CORS setup (if needed for frontend)
-
-Sprint 7: Frontend (Basic Forms)
-  
-  Goal: Build simple HTML forms for registration, login, and KYC upload
-  Deliverables:
-    Templates with Bootstrap/CSS
-    User-friendly interactions
-    Success/failure messages
+4. Profile Management
+      Users can view their profile details, including email and phone number.
+      Display of KYC verification status.
 
 
+URL for access
+      1. http://127.0.0.1:8000/accounts/register/
+      2. http://127.0.0.1:8000/accounts/login/
+      3.  http://127.0.0.1:8000/accounts/dashboard/
+
+      
+      
 
 
-
-
-Note :
- Django admin login :
-   username : hcl
-   password : hcl
+Note:
+      Django admin username password
+            username:hcl
+            password:hcl
+      
+            
